@@ -2,11 +2,11 @@
 
 <html lang="pt">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu site - Currículo</title>
 
-    <link rel="stylesheet" href="./CSS/styles.css"/>
+    <link rel="stylesheet" href="./CSS/styles.css">
     <script src="./Js/main.js"></script>
   </head>
 
@@ -14,9 +14,8 @@
 
     <!-- Cabeçalho do site (menu) -->
     <header>
-
       <!-- Parte da foto e nome -->
-      <div class="eu">
+      <div id="eu">
         <img src="./imagens/imgaens/foto.jpg" alt="minha_foto" width="50rem" height="50rem">
         <h1>luiz gustavo</h1>
       </div>
@@ -50,13 +49,37 @@
     </header>
 
     <!-- Barra lateral (redes sociais) -->
-     <aside>
+    <aside id="asideRedes">
         <div id="redesSociais">
           <img class="git" src="./imagens/desing/icones/github.png" alt="meu_github" width="40px" height="40px" onclick="github()">
           <img class="linkedin" src="./imagens/desing/icones/linkedin-logo.png" alt="meu_linkedin" width="40px" height="40px" onclick="linkedin()">
           <img class="dev" src="./imagens/desing/icones/dev.png" alt="meu_dev" width="40px" height="40px" onclick="dev()">
         </div>
-     </aside>
+    </aside>
+
+    <!-- Conteudo do site -->
+    <article id="apresentacao">
+      <div class="conteudoApresentacao">
+        <h1>Prazer! Sou o Luiz Gustavo</h1>
+        <p class="sobreMim">
+          Sou estudante de programação de Front e Back-end
+          <br>
+          Estou sempre melhorando cada vez mais!
+        </p>
+
+        <button>
+          <p class="textButton" onclick="acao1()" >
+            <img src="./imagens/desing/icones/right-arrow.png" alt="setaTrajetoria" width="40px" height="40px">
+            Vamos conhecer minha <br> trajetória?
+          </p>
+        </button>
+      </div>
+
+      <div class="imagemApresentacao">
+        <a href=" " onclick="freepik()">Designed by Freepik</a>
+        <img src="./imagens/imgaens/imagemApresentacao.jpg" alt="Imagem de demonstracao do Freepik">
+      </div>
+    </article>
 
     <!-- Gsap (biblioteca de animação em JS) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
