@@ -1,0 +1,66 @@
+<!doctype html>
+
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meu site - Currículo</title>
+
+    <link rel="stylesheet" href="./CSS/styles.css"/>
+    <script src="./Js/main.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Cabeçalho do site (menu) -->
+    <header>
+
+      <!-- Parte da foto e nome -->
+      <div class="eu">
+        <img src="./imagens/imgaens/foto.jpg" alt="minha_foto" width="50rem" height="50rem">
+        <h1>luiz gustavo</h1>
+      </div>
+
+      <!-- Parte da lista do menu -->
+      <ul id="home_list">
+        <li class="home">home</li>
+        <li class="sobre">sobre</li>
+        <li class="projetos">projetos</li>
+        <li class="contato">contatos</li>
+      </ul>
+      
+      <!-- Hamburguer e menuBar quando screen witdh < 576px -->
+      <button id="hamburguer" onclick="effectMenu()">
+        <div class="linha1"></div>
+        <div class="linha2"></div>
+        <div class="linha3"></div>
+      </button>
+
+      <!-- Barra lateral de menu -->
+      <article id="menuLateral">
+        <div id="menuBar">
+          <ul class="menuList">
+            <li class="home">home</li>
+            <li class="sobre">sobre</li>
+            <li class="projetos">projetos</li>
+            <li class="contato">contatos</li>
+          </ul>
+        </div>
+      </article>
+    </header>
+
+    <!-- Barra lateral (redes sociais) -->
+     <aside>
+        <div id="redesSociais">
+          <img class="git" src="./imagens/desing/icones/github.png" alt="meu_github" width="40px" height="40px" onclick="github()">
+          <img class="linkedin" src="./imagens/desing/icones/linkedin-logo.png" alt="meu_linkedin" width="40px" height="40px" onclick="linkedin()">
+          <img class="dev" src="./imagens/desing/icones/dev.png" alt="meu_dev" width="40px" height="40px" onclick="dev()">
+        </div>
+     </aside>
+
+    <!-- Gsap (biblioteca de animação em JS) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>    
+  </body>
+</html>

@@ -1,0 +1,166 @@
+* {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 100px 0px 50px;
+  height: 5rem;
+  box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.5);
+}
+header .eu {
+  display: flex;
+  align-self: center;
+  align-items: center;
+  justify-content: space-between;
+  width: 13rem;
+  border-top-left-radius: 1.58rem;
+  border-bottom-left-radius: 1.58rem;
+}
+header .eu img {
+  border-radius: 10rem;
+}
+header .eu h1 {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+header .eu:hover {
+  cursor: pointer;
+}
+header .eu:hover h1 {
+  color: rgb(163, 159, 159);
+  transition: 0.4s;
+}
+header #home_list {
+  display: flex;
+  justify-content: space-around;
+  width: 35rem;
+  align-items: center;
+}
+header #home_list li {
+  text-transform: uppercase;
+  font-weight: 550;
+  height: 100%;
+  padding: 0px 15px;
+  display: flex;
+  align-items: center;
+}
+header #home_list li:hover {
+  cursor: pointer;
+  border-bottom: 5px solid black;
+  transition: 0.3s;
+}
+header #hamburguer {
+  display: none;
+}
+header #menuLateral {
+  display: none;
+}
+header #menuLateral #menuBar {
+  display: none;
+}
+
+aside {
+  height: 10rem;
+  width: 3.5rem;
+  padding: 3px 3px 3px 0px;
+  position: fixed;
+  background-color: white;
+  top: 15rem;
+  box-shadow: 0px 0px 9px 2px rgba(0, 0, 0, 0.39);
+  cursor: pointer;
+}
+aside #redesSociais {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+aside #redesSociais img:nth-child(1):hover, aside #redesSociais img:nth-child(2):hover, aside #redesSociais img:nth-child(3):hover {
+  transform: scale(1.1);
+  transition: 0.2s;
+}
+
+@media (width <= 866px) {
+  header {
+    padding: 0px 30px 0px 10px;
+  }
+}
+@media (width < 748px) {
+  header div h1 {
+    margin-left: 20px;
+  }
+}
+@media (width < 576px) {
+  header div:nth-child(1) {
+    width: 13rem;
+  }
+  header div:nth-child(1) h1 {
+    margin: 0px;
+  }
+  header #home_list {
+    display: none;
+  }
+  header #hamburguer {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    align-self: center;
+    width: 30px;
+    height: 25px;
+  }
+  header #hamburguer div {
+    width: 100%;
+    height: 4px;
+    border-radius: 3px;
+    background-color: black;
+    position: relative;
+  }
+  header #menuLateral {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.295);
+    position: fixed;
+    top: 5rem;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  header #menuLateral #menuBar {
+    display: flex;
+    justify-content: center;
+    width: 15rem;
+    top: 5rem;
+    right: -240px;
+    height: 100%;
+    position: fixed;
+    background-color: white;
+  }
+  header #menuLateral #menuBar .menuList {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 10rem;
+    width: 100%;
+    align-items: center;
+    padding: 10px 0px;
+  }
+  header #menuLateral #menuBar .menuList li {
+    display: flex;
+    text-transform: uppercase;
+    justify-content: center;
+    font-weight: 550;
+    width: 65%;
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+    cursor: pointer;
+  }
+}/*# sourceMappingURL=styles.css.map */
