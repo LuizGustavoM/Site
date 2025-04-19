@@ -144,7 +144,7 @@ aside{
         }
 
         button{
-            width: 260px;
+            width: 250px;
             height: 60px;
             border-radius: 30px;
             align-self: center;
@@ -155,23 +155,35 @@ aside{
             cursor: pointer;
             overflow:hidden;
             display: flex;
-            
+            justify-content: center;
+            align-items: center;
 
-            .textButton{
-                width: 300px;
+            p{
                 display: flex;
-                justify-self: center;
-                align-self: center;
+                justify-content: center;
                 align-items: center;
-                justify-content: space-between;
-                margin-left: -4.75rem;
 
+                img{
+                    position: absolute;
+                    left: 14.7%;
+                }
             }
 
             &:hover{
                 margin-top: -.3rem;
-                transition: .1s;
                 box-shadow: 0px 0px 16px -4px rgba(0,0,0,0.76);
+                width: 270px;
+                transition: .1s;
+                
+                p{
+                    margin-left:50px;
+                    transition: .5s;
+
+                    img{
+                        left: 19rem;
+                        transition: 1s;
+                    }
+                }
             }
         }
     }
@@ -201,6 +213,14 @@ aside{
     #apresentacao{
         .conteudoApresentacao{
             margin-left: 8rem;
+        
+            button{
+                p{
+                    img{
+                        left: 8%;
+                    }
+                }
+            }
         }
     }
 }
@@ -304,6 +324,16 @@ aside{
         justify-content: center;
         align-items: center;
 
+        .conteudoApresentacao{
+            button{
+                p{
+                    img{
+                        left: 15%;
+                    }
+                }
+            }
+        }
+
         .imagemApresentacao{
             display: none;
         }
@@ -312,15 +342,16 @@ aside{
 
 @media (width < 507px){
     #asideRedes{
-        width: 2rem;
-        height: 6rem;
+        width: 3.5rem;
+        height: 9rem;
 
         #redesSociais{
             display: flex;
             flex-direction: column;
+
             img{
-               width: 25px; 
-               height: 25px;
+               width: 40px; 
+               height: 40px;
             }
         }
     }
@@ -336,6 +367,24 @@ aside{
 
             p{
                 width: 17rem;
+            }
+
+            button{
+                p{
+                    img{
+                        display: none;
+                        left: 0px;
+                        position: static;
+                    }
+                }
+
+                &:hover{
+                    width: 250px;
+
+                    p{
+                        margin-left: 0px;
+                    }
+                }
             }
         }
     }

@@ -123,7 +123,7 @@ aside #redesSociais img:nth-child(1):hover, aside #redesSociais img:nth-child(2)
   padding-bottom: 4rem;
 }
 #apresentacao .conteudoApresentacao button {
-  width: 260px;
+  width: 250px;
   height: 60px;
   border-radius: 30px;
   align-self: center;
@@ -134,20 +134,31 @@ aside #redesSociais img:nth-child(1):hover, aside #redesSociais img:nth-child(2)
   cursor: pointer;
   overflow: hidden;
   display: flex;
-}
-#apresentacao .conteudoApresentacao button .textButton {
-  width: 300px;
-  display: flex;
-  justify-self: center;
-  align-self: center;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
-  margin-left: -4.75rem;
+}
+#apresentacao .conteudoApresentacao button p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#apresentacao .conteudoApresentacao button p img {
+  position: absolute;
+  left: 14.7%;
 }
 #apresentacao .conteudoApresentacao button:hover {
   margin-top: -0.3rem;
-  transition: 0.1s;
   box-shadow: 0px 0px 16px -4px rgba(0, 0, 0, 0.76);
+  width: 270px;
+  transition: 0.1s;
+}
+#apresentacao .conteudoApresentacao button:hover p {
+  margin-left: 50px;
+  transition: 0.5s;
+}
+#apresentacao .conteudoApresentacao button:hover p img {
+  left: 19rem;
+  transition: 1s;
 }
 #apresentacao .imagemApresentacao {
   display: flex;
@@ -169,6 +180,9 @@ aside #redesSociais img:nth-child(1):hover, aside #redesSociais img:nth-child(2)
 @media (width < 1051px) {
   #apresentacao .conteudoApresentacao {
     margin-left: 8rem;
+  }
+  #apresentacao .conteudoApresentacao button p img {
+    left: 8%;
   }
 }
 @media (width < 867px) {
@@ -257,22 +271,25 @@ aside #redesSociais img:nth-child(1):hover, aside #redesSociais img:nth-child(2)
     justify-content: center;
     align-items: center;
   }
+  #apresentacao .conteudoApresentacao button p img {
+    left: 15%;
+  }
   #apresentacao .imagemApresentacao {
     display: none;
   }
 }
 @media (width < 507px) {
   #asideRedes {
-    width: 2rem;
-    height: 6rem;
+    width: 3.5rem;
+    height: 9rem;
   }
   #asideRedes #redesSociais {
     display: flex;
     flex-direction: column;
   }
   #asideRedes #redesSociais img {
-    width: 25px;
-    height: 25px;
+    width: 40px;
+    height: 40px;
   }
   #apresentacao .conteudoApresentacao {
     display: flex;
@@ -283,5 +300,16 @@ aside #redesSociais img:nth-child(1):hover, aside #redesSociais img:nth-child(2)
   }
   #apresentacao .conteudoApresentacao p {
     width: 17rem;
+  }
+  #apresentacao .conteudoApresentacao button p img {
+    display: none;
+    left: 0px;
+    position: static;
+  }
+  #apresentacao .conteudoApresentacao button:hover {
+    width: 250px;
+  }
+  #apresentacao .conteudoApresentacao button:hover p {
+    margin-left: 0px;
   }
 }/*# sourceMappingURL=styles.css.map */
