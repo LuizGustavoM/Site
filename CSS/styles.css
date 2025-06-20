@@ -61,8 +61,8 @@ header #home_list li {
 }
 header #home_list li:hover {
   cursor: pointer;
-  border-bottom: 5px solid black;
-  transition: 0.3s;
+  color: rgb(163, 159, 159);
+  transition: 0.2s;
 }
 header #hamburguer {
   display: none;
@@ -71,6 +71,9 @@ header #menuLateral {
   display: none;
 }
 header #menuLateral #menuBar {
+  display: none;
+}
+header #menuLateral #contatos_menuLateral {
   display: none;
 }
 
@@ -147,18 +150,9 @@ aside #redesSociais img:nth-child(1):hover, aside #redesSociais img:nth-child(2)
   left: 14.7%;
 }
 #apresentacao .conteudoApresentacao button:hover {
-  margin-top: -0.3rem;
-  box-shadow: 0px 0px 16px -4px rgba(0, 0, 0, 0.76);
-  width: 270px;
+  margin-top: 0.2rem;
+  box-shadow: 0px 0px 16px -4px rgba(0, 0, 0, 0.3);
   transition: 0.1s;
-}
-#apresentacao .conteudoApresentacao button:hover p {
-  margin-left: 50px;
-  transition: 0.5s;
-}
-#apresentacao .conteudoApresentacao button:hover p img {
-  left: 19rem;
-  transition: 1s;
 }
 #apresentacao .imagemApresentacao {
   display: flex;
@@ -261,8 +255,16 @@ aside #redesSociais img:nth-child(1):hover, aside #redesSociais img:nth-child(2)
     padding-bottom: 10px;
     cursor: pointer;
   }
+  header #menuLateral #contatos_menuLateral {
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    width: 140px;
+    right: -195px;
+    bottom: 20px;
+  }
   #asideRedes {
-    top: 16rem;
+    display: none;
   }
   #apresentacao {
     margin: 0rem 0px 0px -6rem;
@@ -270,9 +272,6 @@ aside #redesSociais img:nth-child(1):hover, aside #redesSociais img:nth-child(2)
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-  #apresentacao .conteudoApresentacao button p img {
-    left: 15%;
   }
   #apresentacao .imagemApresentacao {
     display: none;
@@ -294,6 +293,7 @@ aside #redesSociais img:nth-child(1):hover, aside #redesSociais img:nth-child(2)
   #apresentacao .conteudoApresentacao {
     display: flex;
     align-items: center;
+    margin-left: 7em;
   }
   #apresentacao .conteudoApresentacao h1 {
     width: 14rem;
@@ -311,5 +311,16 @@ aside #redesSociais img:nth-child(1):hover, aside #redesSociais img:nth-child(2)
   }
   #apresentacao .conteudoApresentacao button:hover p {
     margin-left: 0px;
+  }
+}
+@media (width < 381px) {
+  #menuLateral {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.295);
+    position: fixed;
+    top: 5rem;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
 }/*# sourceMappingURL=styles.css.map */
