@@ -1,5 +1,7 @@
+let larguraTela = window.innerWidth;
+
 // timeline em gsap
-let tl = gsap.timeline();
+const tl = gsap.timeline();
 
 // Efeito do menu hamburguer
 function effectMenu(){
@@ -8,7 +10,6 @@ function effectMenu(){
     const linha2 = document.querySelector(".linha2");
     const linha3 = document.querySelector(".linha3");
     const menuLateral = document.querySelector("#menuLateral");
-    const aside = document.querySelector("#asideRedes");
 
     if (getComputedStyle(linha2).display === "none"){
 
@@ -26,7 +27,7 @@ function effectMenu(){
 
         // efeito do menu lateral
         menuLateral.style.display = "none"
-        aside.style.display = "inline"
+        
 
         gsap.to("#menuBar", {
             x:238
@@ -37,6 +38,7 @@ function effectMenu(){
         })
 
     } else{
+        
         //efeito no hamburguer
         linha1.style.transform = "rotate(44deg)"
         linha1.style.top = "12px"
@@ -50,8 +52,7 @@ function effectMenu(){
         hamburguer.style.right = "0rem"
 
         // efeito do menu lateral
-        menuLateral.style.display = "inline"
-        aside.style.display = "none"
+        menuLateral.style.display = "flex"
 
         gsap.to("#menuBar", {
             x:-240,

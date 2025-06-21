@@ -68,8 +68,8 @@ header{
 
             &:hover{
                 cursor: pointer;
-                color:rgb(163, 159, 159);
-                transition: 0.2s;
+                border-bottom: 5px solid black;
+                transition: .3s;
             }
         }
     }
@@ -85,7 +85,7 @@ header{
             display: none;
         } 
 
-        #contatos_menuLateral{
+        #contato_menuLateral{
             display: none;
         }
     }   
@@ -148,7 +148,7 @@ aside{
         }
 
         button{
-            width: 250px;
+            width: 260px;
             height: 60px;
             border-radius: 30px;
             align-self: center;
@@ -158,25 +158,23 @@ aside{
             font-weight: bold;
             cursor: pointer;
             overflow:hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            
 
-            p{
+            .textButton{
+                width: 300px;
                 display: flex;
-                justify-content: center;
+                justify-self: center;
+                align-self: center;
                 align-items: center;
+                justify-content: space-between;
+                margin-left: -4.75rem;
 
-                img{
-                    position: absolute;
-                    left: 14.7%;
-                }
             }
 
             &:hover{
-                margin-top: .2rem;
-                box-shadow: 0px 0px 16px -4px rgba(0,0,0,0.3);
+                margin-top: -.3rem;
                 transition: .1s;
+                box-shadow: 0px 0px 16px -4px rgba(0,0,0,0.76);
             }
         }
     }
@@ -202,22 +200,6 @@ aside{
 }
 
 // Responsivo
-@media (width < 1051px){
-    #apresentacao{
-        .conteudoApresentacao{
-            margin-left: 8rem;
-        
-            button{
-                p{
-                    img{
-                        left: 8%;
-                    }
-                }
-            }
-        }
-    }
-}
-
 @media (width < 867px){
     header{
         padding: 0px 30px 0px 10px;
@@ -281,6 +263,7 @@ aside{
                 height: 100%;
                 position: fixed;
                 background-color: white;
+                padding-top: 5.5em;
     
                 .menuList{
                     display: flex;
@@ -290,7 +273,7 @@ aside{
                     width: 100%;
                     align-items: center;
                     padding:10px 0px;
-    
+
                     li{
                         display: flex;
                         text-transform: uppercase;
@@ -306,11 +289,11 @@ aside{
 
             #contatos_menuLateral{
                 display: flex;
-                position: fixed;
                 justify-content: space-between;
-                width: 140px;
-                right: -195px;
-                bottom: 20px;
+                width: 150px;
+                position: absolute;
+                right: -198px; 
+                top: 30px;
             }
         }
     }
@@ -320,11 +303,14 @@ aside{
     }
 
     #apresentacao{
-        margin: 0rem 0px 0px -6rem;
         display: flex;
-        flex-direction: column;
         justify-content: center;
-        align-items: center;
+
+        .conteudoApresentacao{
+            display: flex;
+            align-items: center;
+            margin: 0;
+        }
 
         .imagemApresentacao{
             display: none;
@@ -333,26 +319,10 @@ aside{
 }
 
 @media (width < 507px){
-    #asideRedes{
-        width: 3.5rem;
-        height: 9rem;
-
-        #redesSociais{
-            display: flex;
-            flex-direction: column;
-
-            img{
-               width: 40px; 
-               height: 40px;
-            }
-        }
-    }
-
     #apresentacao{
         .conteudoApresentacao{
             display: flex;
             align-items: center;
-            margin-left: 7em;
 
             h1{
                 width: 14rem;  
@@ -361,36 +331,6 @@ aside{
             p{
                 width: 17rem;
             }
-
-            button{
-                p{
-                    img{
-                        display: none;
-                        left: 0px;
-                        position: static;
-                    }
-                }
-
-                &:hover{
-                    width: 250px;
-
-                    p{
-                        margin-left: 0px;
-                    }
-                }
-            }
         }
-    }
-}
-
-@media (width < 381px){
-    #menuLateral{
-        display: none;
-        background-color: rgba(0, 0, 0, 0.295);
-        position: fixed;
-        top: 5rem;
-        left: 0;
-        width: 100%;
-        height: 100%;
     }
 }
